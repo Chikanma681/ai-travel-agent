@@ -1,0 +1,26 @@
+{
+  "name": "ai-travel-agent",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node --esm src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^2.0.14",
+    "@openrouter/ai-sdk-provider": "^1.1.2",
+    "ai": "^5.0.14",
+    "dotenv": "^17.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
