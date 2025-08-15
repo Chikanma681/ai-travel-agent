@@ -1,14 +1,15 @@
 import { openrouter } from '@openrouter/ai-sdk-provider';
-import { ModelMessage, streamText } from 'ai';
+import { streamText, stepCountIs } from 'ai';
 import 'dotenv/config';
 import * as readline from 'node:readline/promises';
+import { findFlight } from './tool.ts';
 
 const terminal = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-const messages:ModelMessage[] = [];
+const messages:any = [];
 
 async function main() {
   while (true) {
@@ -19,8 +20,11 @@ async function main() {
     const result = streamText({
       model: openrouter('openai/gpt-4o-mini'),
       messages,
-        system: "You are AI flight assistant that uses Amadeus API to find flights. You can answer questions about flights, such as 'find me a flight from SYD to BKK on 2023-05-02'.",
-
+      system: "You are AI flight assistant that uses Amadeus API to find flights. You can answer questions about flights, such as 'find me a flight from SYD to BKK on 2023-05-02'.",
+      tools: {
+        findFlight: findFlight,
+      },
+      stopWhen: stepCountIs(3),
     });
 
     let fullResponse = '';

@@ -9,28 +9,34 @@ export const findFlight = tool({
         departureDate: z.string().describe("Departure date in YYYY-MM-DD format if someone says Feb 25 assume it is the present year (e.g., 2023-02-25)"),
         maxPrice: z.number().optional().describe("Maximum price per traveler"),
     }),
-    execute: async ({ originLocationCode, destinationLocationCode, departureDate, maxPrice }:{
-        originLocationCode: string;
-        destinationLocationCode: string;
-        departureDate: string;
-        maxPrice?: number;
-    }) => {
+    execute: async ({ originLocationCode, destinationLocationCode, departureDate, maxPrice }) => {
         const searchParams = new URLSearchParams();
-        
         searchParams.append('originLocationCode', originLocationCode);
         searchParams.append('destinationLocationCode', destinationLocationCode);
         searchParams.append('departureDate', departureDate);
         searchParams.append('adults', '1');
-        
         if (maxPrice) searchParams.append('maxPrice', maxPrice.toString());
-
-        const response = await fetch(`https://test.api.amadeus.com/v2/shopping/flight-offers?${searchParams}`, {
+      
+        try {
+          const response = await fetch(`https://test.api.amadeus.com/v2/shopping/flight-offers?${searchParams}`, {
             headers: {
-                "Authorization": `Bearer ${process.env.AMADEUS_BEARER_TOKEN}`
+              "Authorization": `Bearer ${process.env.AMADEUS_BEARER_TOKEN}`
             }
-        });
-
-        const data = await response.json();
-        return data;
-    }
+          });
+      
+          // Check if the response is ok
+          if (!response.ok) {
+            const errorData = await response.text();
+            console.error('API Error:', response.status, errorData);
+            return { error: `API returned ${response.status}: ${errorData}` };
+          }
+      
+          const data = await response.json();
+          console.log('API Response:', data); // Debug log
+          return data;
+        } catch (error) {
+          console.error('Fetch error:', error);
+          return { error: 'Failed to fetch flight data' };
+        }
+      }
 });
