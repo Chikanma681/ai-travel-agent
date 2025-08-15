@@ -1,6 +1,6 @@
 import { tool } from "ai";
 import { z } from "zod";
-  
+import { tokenManager } from "../tokenManager.ts";
 // @ts-ignore
 export const findFlight = tool({
     description: "Finds flight offers based on search criteria using Amadeus API.",
@@ -18,10 +18,12 @@ export const findFlight = tool({
         searchParams.append('adults', '1');
         if (maxPrice) searchParams.append('maxPrice', maxPrice.toString());
       
+
         try {
+          const token = await tokenManager.getValidToken();
           const response = await fetch(`https://test.api.amadeus.com/v2/shopping/flight-offers?${searchParams}`, {
             headers: {
-              "Authorization": `Bearer ${process.env.AMADEUS_BEARER_TOKEN}`
+              "Authorization": `Bearer ${token}`
             }
           });
       

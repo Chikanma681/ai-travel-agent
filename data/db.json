@@ -1,0 +1,20 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "hello"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today? If you need help finding flights, just let me know your travel details!"
+    },
+    {
+      "role": "user",
+      "content": "hello, i want to see any flight from edmonton to montreal on nov 9th 2025"
+    },
+    {
+      "role": "assistant",
+      "content": "It seems there was an issue with accessing the flight information due to an expired token. Unfortunately, I can't retrieve flight details at the moment. Please check back later or try again with the same request!"
+    }
+  ]
+}
