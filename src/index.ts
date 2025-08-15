@@ -1,15 +1,15 @@
 import { openrouter } from '@openrouter/ai-sdk-provider';
-import { streamText, stepCountIs } from 'ai';
+import { streamText, stepCountIs, ModelMessage } from 'ai';
 import 'dotenv/config';
 import * as readline from 'node:readline/promises';
-import { findFlight } from './tool.ts';
+import { findFlight } from "./tools";
 
 const terminal = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-const messages:any = [];
+const messages:ModelMessage[] = [];
 
 async function main() {
   while (true) {

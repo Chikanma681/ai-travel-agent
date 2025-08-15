@@ -1,6 +1,7 @@
 import { tool } from "ai";
 import { z } from "zod";
-
+  
+// @ts-ignore
 export const findFlight = tool({
     description: "Finds flight offers based on search criteria using Amadeus API.",
     inputSchema: z.object({
@@ -24,7 +25,6 @@ export const findFlight = tool({
             }
           });
       
-          // Check if the response is ok
           if (!response.ok) {
             const errorData = await response.text();
             console.error('API Error:', response.status, errorData);
@@ -32,7 +32,7 @@ export const findFlight = tool({
           }
       
           const data = await response.json();
-          console.log('API Response:', data); // Debug log
+          console.log('API Response:', data); 
           return data;
         } catch (error) {
           console.error('Fetch error:', error);
