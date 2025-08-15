@@ -2,19 +2,59 @@
   "messages": [
     {
       "role": "user",
-      "content": "hello"
+      "content": "flights from edmonton to montreal on 9th august 2025"
     },
     {
       "role": "assistant",
-      "content": "Hello! How can I assist you today? If you need help finding flights, just let me know your travel details!"
+      "content": "I encountered an error while trying to fetch flight data for your request. Please try again later or check back for updates."
     },
     {
       "role": "user",
-      "content": "hello, i want to see any flight from edmonton to montreal on nov 9th 2025"
+      "content": "flight from edmonton to montreal nov 9,2025"
     },
     {
       "role": "assistant",
-      "content": "It seems there was an issue with accessing the flight information due to an expired token. Unfortunately, I can't retrieve flight details at the moment. Please check back later or try again with the same request!"
+      "content": "I'm currently unable to retrieve flight data for the route from Edmonton to Montreal on November 9, 2025. Please try again later or check back for updates."
+    },
+    {
+      "role": "user",
+      "content": "try book the old flight again"
+    },
+    {
+      "role": "assistant",
+      "content": "I am still unable to fetch flight data for your request. It seems there is a persistent issue. Please try again later or check back for updates."
+    },
+    {
+      "role": "user",
+      "content": "book flight"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm unable to fetch flight data for your request at the moment. It appears there is an issue with retrieving the flight information. Please try again later or check for updates."
+    },
+    {
+      "role": "user",
+      "content": "gimme flight details"
+    },
+    {
+      "role": "assistant",
+      "content": "I need specific details in order to assist you better. Could you please provide me with the following information:\n\n1. Origin city/airport IATA code (e.g., YEG for Edmonton)\n2. Destination city/airport IATA code (e.g., YUL for Montreal)\n3. Departure date (in YYYY-MM-DD format)\n4. Maximum price per traveler (if any)\n\nWith this information, I'll be able to help you find flight details."
+    },
+    {
+      "role": "user",
+      "content": "book the flight i talked about earlier"
+    },
+    {
+      "role": "assistant",
+      "content": "I am currently unable to fetch flight data for the route from Edmonton to Montreal on November 9, 2025. It seems there is a technical issue. Please try again later or check back for updates."
+    },
+    {
+      "role": "user",
+      "content": "book the flight now it should work"
+    },
+    {
+      "role": "assistant",
+      "content": "Here are some flight options for your trip from Edmonton (YEG) to Montreal (YUL) on November 9, 2025:\n\n### Flight Options\n\n1. **Air Canada (AC)**  \n   - **Departure:** 11:45 AM (YEG)  \n   - **Arrival:** 5:55 PM (YUL)  \n   - **Duration:** 4 hours 10 minutes  \n   - **Price:** €243.46 \n\n2. **Air Canada (AC)**  \n   - **Departure:** 9:55 AM (YEG)  \n   - **Arrival:** 10:48 AM (YVR), then a connection at 1:15 PM (YVR) to 7:00 PM (YUL)  \n   - **Duration:** 7 hours 30 minutes with one stop  \n   - **Price:** €243.46 \n\n3. **Air Canada (AC)**  \n   - **Departure:** 6:00 AM (YEG)  \n   - **Arrival:** 12:55 PM (YUL), with a connection  \n   - **Duration:** 11 hours 46 minutes   \n   - **Price:** €214.58 \n\n4. **WestJet (WS)**  \n   - **Departure:** 7:00 AM (YEG)  \n   - **Arrival:** 5:00 PM (YUL), with a connection  \n   - **Duration:** 18 hours 26 minutes  \n   - **Price:** €354.33 \n\n5. **Air Canada (AC)**  \n   - **Departure:** 1:20 PM (YEG)  \n   - **Arrival:** 7:40 PM (YUL), with a connection  \n   - **Duration:** 14 hours 16 minutes  \n   - **Price:** €301.70  \n\n### Additional Information:\n- All prices are approximate and subject to change.\n- The prices do not typically include checked bags, meal charges, or seat assignments unless specified.\n- Booking can be done through the respective airline websites or travel agencies.\n\nLet me know if you need assistance with booking or other details!"
     }
   ]
 }

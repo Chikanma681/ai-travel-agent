@@ -1,7 +1,8 @@
 import { openrouter } from '@openrouter/ai-sdk-provider';
 import { streamText, stepCountIs } from 'ai';
 import type { ModelMessage } from 'ai'
-import 'dotenv/config';
+import dotenv from "dotenv";
+
 import * as readline from 'node:readline/promises';
 import { findFlight } from "./tools.ts";
 import { Low } from 'lowdb';
@@ -9,6 +10,7 @@ import { JSONFile } from 'lowdb/node';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
+dotenv.config();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Database setup
