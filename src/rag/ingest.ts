@@ -10,10 +10,24 @@ const index = new UpstashIndex({
     token: process.env.UPSTASH_VECTOR_REST_TOKEN as string,
  })
 
+ type Record = {
+  id:string,
+  text:string,
+  prediction:string,
+  prediction_agent:string,
+  annotation:string,
+  annotation_agent:string,
+  multi_label:string,
+  explanation:string,
+  status:string,
+  event_timestamp:string,
+  metadata:string,
+  metrics:string
+ }
 export async function indexHotelData() {
     const csvPath = path.join(process.cwd(), 'src/dataset/montreal_reviews.csv')
     const csvData = fs.readFileSync(csvPath, 'utf-8')
-    const records:any = parse(csvData, {
+    const records:Record[] = parse(csvData, {
       columns: true,
       skip_empty_lines: true,
     })
