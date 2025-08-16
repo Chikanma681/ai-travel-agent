@@ -55,6 +55,118 @@
     {
       "role": "assistant",
       "content": "Here are some flight options for your trip from Edmonton (YEG) to Montreal (YUL) on November 9, 2025:\n\n### Flight Options\n\n1. **Air Canada (AC)**  \n   - **Departure:** 11:45 AM (YEG)  \n   - **Arrival:** 5:55 PM (YUL)  \n   - **Duration:** 4 hours 10 minutes  \n   - **Price:** €243.46 \n\n2. **Air Canada (AC)**  \n   - **Departure:** 9:55 AM (YEG)  \n   - **Arrival:** 10:48 AM (YVR), then a connection at 1:15 PM (YVR) to 7:00 PM (YUL)  \n   - **Duration:** 7 hours 30 minutes with one stop  \n   - **Price:** €243.46 \n\n3. **Air Canada (AC)**  \n   - **Departure:** 6:00 AM (YEG)  \n   - **Arrival:** 12:55 PM (YUL), with a connection  \n   - **Duration:** 11 hours 46 minutes   \n   - **Price:** €214.58 \n\n4. **WestJet (WS)**  \n   - **Departure:** 7:00 AM (YEG)  \n   - **Arrival:** 5:00 PM (YUL), with a connection  \n   - **Duration:** 18 hours 26 minutes  \n   - **Price:** €354.33 \n\n5. **Air Canada (AC)**  \n   - **Departure:** 1:20 PM (YEG)  \n   - **Arrival:** 7:40 PM (YUL), with a connection  \n   - **Duration:** 14 hours 16 minutes  \n   - **Price:** €301.70  \n\n### Additional Information:\n- All prices are approximate and subject to change.\n- The prices do not typically include checked bags, meal charges, or seat assignments unless specified.\n- Booking can be done through the respective airline websites or travel agencies.\n\nLet me know if you need assistance with booking or other details!"
+    },
+    {
+      "role": "user",
+      "content": "Hello"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today? If you have any questions or need information about flights, feel free to ask!"
+    },
+    {
+      "role": "user",
+      "content": "do you know ilia topuria?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, Ilia Topuria is a professional mixed martial artist from Georgia, known for his skills in grappling and striking. He competes in the featherweight division of the Ultimate Fighting Championship (UFC). Topuria has gained attention for his impressive performances and undefeated record. If you have any specific questions about him or his career, feel free to ask!"
+    },
+    {
+      "role": "user",
+      "content": "what is dependency injection "
+    },
+    {
+      "role": "assistant",
+      "content": "Dependency Injection (DI) is a design pattern used in software development, particularly in object-oriented programming, to achieve Inversion of Control (IoC) between classes and their dependencies. The main idea is to separate the creation of a dependent object from its usage, which promotes code reusability, flexibility, and easier testing.\n\n### Key Concepts:\n\n1. **Dependency**: Any object that another object requires to function properly.\n\n2. **Injection**: The process of providing the dependent objects (dependencies) to a class instead of the class creating them internally.\n\n### Types of Dependency Injection:\n\n1. **Constructor Injection**: Dependencies are provided through a class constructor.\n   ```python\n   class Service:\n       def __init__(self, dependency):\n           self.dependency = dependency\n   ```\n\n2. **Setter Injection**: Dependencies are provided through setter methods after the object is constructed.\n   ```python\n   class Service:\n       def set_dependency(self, dependency):\n           self.dependency = dependency\n   ```\n\n3. **Interface Injection**: The dependency provides an injector method that will inject the dependency into any client that passes itself to the method.\n\n### Benefits of Dependency Injection:\n\n- **Decoupling**: Reduces the coupling between classes, making it easier to swap out implementations.\n- **Testing**: Simplifies unit testing by allowing mock dependencies to be injected.\n- **Maintainability**: Makes the codebase easier to maintain and extend due to a clearer separation of concerns.\n\n### Example in a Practical Context:\n\nIn a web application, if a `UserService` requires a `UserRepository` to fetch user data, instead of the `UserService` creating a `UserRepository` instance, it can receive it through DI:\n```python\nclass UserRepository:\n    pass\n\nclass UserService:\n    def __init__(self, user_repository: UserRepository):\n        self.user_repository = user_repository\n\n# In the application setup\nuser_repository = UserRepository()\nuser_service = UserService(user_repository)\n```\n\nThis way, you can change the `UserRepository` implementation without modifying the `UserService`.\n\nOverall, Dependency Injection is widely used in modern software development frameworks and is an essential concept in achieving scalable, maintainable applications."
+    },
+    {
+      "role": "user",
+      "content": "i live in edmonton"
+    },
+    {
+      "role": "assistant",
+      "content": "That's great! Edmonton is a vibrant city with plenty of attractions and activities. If you have any questions about local events, places to visit, or if you need assistance with anything specific, feel free to ask!"
+    },
+    {
+      "role": "user",
+      "content": "lets see if theres a flight from here to abuja tomorrow"
+    },
+    {
+      "role": "assistant",
+      "content": "It looks like I attempted to search for flights with an incorrect date. Since tomorrow's date would be in the past, I'll need a different departure date. Please provide a future date for your flight from Edmonton to Abuja, and I'll be happy to help you find options!"
+    },
+    {
+      "role": "user",
+      "content": "tomorrow is august 19, 2025"
+    },
+    {
+      "role": "assistant",
+      "content": "Here are some flight options from Edmonton (YEG) to Abuja (ABV) on August 19, 2025:\n\n### Flight Options:\n\n1. **Air Canada (AC) / Qatar Airways (QR)**\n   - **Departure:** 11:50 AM (YEG)  \n   - **Arrival:** 6:40 AM (ABV) on August 21   \n   - **Duration:** 35 hours 50 minutes (includes layovers)  \n   - **Stops:** 2\n   - **Price:** €763.48 \n\n2. **Air Canada (AC) / EgyptAir (MS)**\n   - **Departure:** 8:00 PM (YEG)  \n   - **Arrival:** 2:00 PM (ABV) on August 21  \n   - **Duration:** 35 hours  \n   - **Stops:** 2\n   - **Price:** €923.48 \n\n3. **Air Canada (AC) / Air France (AF)**\n   - **Departure:** 11:35 AM (YEG)  \n   - **Arrival:** 4:20 PM (ABV) on August 20  \n   - **Duration:** 21 hours 45 minutes  \n   - **Stops:** 2\n   - **Price:** €1,041.26 \n\n4. **United Airlines (UA)**\n   - **Departure:** 6:02 AM (YEG)  \n   - **Arrival:** 6:20 PM (ABV) on August 20  \n   - **Duration:** 27 hours 15 minutes  \n   - **Stops:** 2\n   - **Price:** €1,065.31 \n\n5. **Air Canada (AC) / Air France (AF)**\n   - **Departure:** 12:00 PM (YEG)  \n   - **Arrival:** 9:10 PM (ABV) on August 20  \n   - **Duration:** 18 hours 25 minutes  \n   - **Stops:** 2\n   - **Price:** €1,078.13 \n\n### Additional Information:\n- All prices are approximate and may vary depending on the booking conditions.\n- Prices include checked bags but may not include meals or seat selection unless otherwise specified.\n\nIf you're interested in booking one of these flights or need any more specific information, feel free to let me know!"
+    },
+    {
+      "role": "user",
+      "content": "what is the cheapest flight"
+    },
+    {
+      "role": "assistant",
+      "content": "The cheapest flight option from Edmonton (YEG) to Abuja (ABV) on August 19, 2025, is as follows:\n\n### Flight Details:\n- **Carrier**: Qatar Airways (QR)\n- **Departure**: August 19, 2025, at 5:25 PM (YEG)\n- **Arrival**: August 22, 2025, at 6:40 AM (ABV)\n- **Total Duration**: Approximately 54 hours 15 minutes with multiple stops.\n- **Price**: **€754.04** (approximately)\n\n### Included Amenities:\n- 2 checked bags\n- Cabin bag\n- Complimentary meals\n\n### Layovers:\n1. From Edmonton to Seattle (SEA)\n2. From Seattle to Doha (DOH)\n3. From Doha to Abuja (ABV)\n\nThis is the most affordable option available. Let me know if you'd like more information or wish to proceed with booking!"
+    },
+    {
+      "role": "user",
+      "content": "i want to add RAG pipeline cos i created this ai-agent to teach a youtube video i want to teach RAG but in a way it still makes sense project wise how can I go about this]"
+    },
+    {
+      "role": "assistant",
+      "content": "To effectively teach Retrieval-Augmented Generation (RAG) in your YouTube video while maintaining a coherent project structure, you can follow these steps to create engaging content:\n\n### 1. **Introduction Section**\n   - **Define RAG**: Start by clearly defining what RAG is and why it's important in the context of AI and natural language processing. Explain how it combines retrieval-based and generation-based methods.\n   - **Use Case Scenarios**: Briefly mention practical applications like chatbots, conversational agents, and document query systems to grab viewers' attention.\n\n### 2. **Project Overview**\n   - **Outline the Project**: Explain the goal of the project you are building. For example, you might be creating a conversational agent that answers questions with the support of external documents.\n   - **Explain the Components**: Explain what components will be built, such as the retrieval system (which retrieves relevant documents) and the generation system (which creates responses based on retrieved data).\n\n### 3. **Demonstrate the RAG Pipeline**\n   - **Architecture Diagram**: Include a visual representation of the RAG pipeline, showcasing how the retrieval and generation components interact.\n   - **Step-by-Step Implementation**: Walk through the project step by step:\n     - **Data Preparation**: Show how to gather and prepare the corpus from which documents will be retrieved.\n     - **Retrieval Method**: Explain different methods of document retrieval (e.g., using vector databases, search engines). Demonstrate implementing a retrieval method (e.g., using ElasticSearch or a vector database).\n     - **Integration with a Language Model**: Show how to integrate the retrieval model with a language model (like GPT) for generating responses based on the retrieved documents. \n\n### 4. **Real-Time Demonstration**\n   - **Live Coding**: Code the RAG pipeline live in your video or showcase a pre-prepared demo. This could include user queries, document retrieval, and response generation.\n   - **Example Queries**: Provide sample queries to demonstrate how the system retrieves documents and generates responses based on them.\n\n### 5. **Conclusion and Key Takeaways**\n   - **Summarize Learnings**: Recap the main components of the RAG pipeline and what viewers should take away from the project.\n   - **Further Reading**: Suggest resources for viewers who want to learn more about RAG, such as academic papers, documentation, and tutorials.\n\n### 6. **Call to Action**\n   - **Engagement**: Encourage viewers to try implementing RAG themselves, ask questions in the comments, and share their own experiences or projects.\n   - **Subscribe**: Remind viewers to subscribe to your channel for more content on AI-related topics.\n\n### Bonus Tips\n- **Visual Aids**: Use diagrams, flowcharts, and animations to illustrate concepts clearly.\n- **Use Analogies**: Explain complex concepts using analogies that are easier for the audience to understand.\n- **Keep It Interactive**: Consider incorporating quizzes or polls to engage viewers throughout the video.\n\nBy structuring your video in this way, you can effectively teach RAG while maintaining a clear project focus, making it easier for your audience to grasp the concepts and apply them in practice."
+    },
+    {
+      "role": "user",
+      "content": "no how will it fix into the video"
+    },
+    {
+      "role": "assistant",
+      "content": "To seamlessly integrate the Retrieval-Augmented Generation (RAG) concept into your YouTube video, you can consider the following structure, highlighting the project and illustrating how RAG adds value. Here’s a suggested format:\n\n### 1. **Introduction (1-2 minutes)**\n   - Briefly introduce the purpose of the video (e.g., \"Today, we’re going to build an AI agent and explore how it can enhance its responses using a technique called RAG.\").\n   - Emphasize the real-world application of the project and the importance of RAG in improving AI responses.\n\n### 2. **Project Overview (3-4 minutes)**\n   - Explain the entire project in a simple way, outlining what the AI agent will do (e.g., answer questions based on specific documents).\n   - Introduce RAG as a crucial component that allows the agent to pull in relevant information dynamically instead of relying solely on pre-trained knowledge.\n\n### 3. **Understanding RAG (5-6 minutes)**\n   - **Concept Explanation**: Define RAG and explain its components (retrieval and generation). Use engaging visuals or animations to illustrate the concept.\n   - **How It Fits**: Discuss how implementing RAG specifically benefits your project (e.g., improves accuracy, allows for up-to-date information).\n\n### 4. **Pipeline Overview (3-4 minutes)**\n   - Present a visual representation of the RAG pipeline. This can be a flowchart showing how user input gets processed, how relevant documents are retrieved, and how the generation model creates a coherent response.\n   - Explain each step briefly, keeping it high-level but enough for viewers to understand its relevance to the project.\n\n### 5. **Implementation (10-15 minutes)**\n   - **Data Preparation**: Show how to prepare the dataset for retrieval. This process may involve document loading and indexing.\n   - **Building Retrieval**: Demonstrate how to implement the retrieval mechanism in your project, such as using embeddings or"
+    },
+    {
+      "role": "user",
+      "content": "you know ilia topuria"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, Ilia Topuria is a professional mixed martial artist known for his skills in grappling and striking. He competes in the featherweight division of the Ultimate Fighting Championship (UFC). Topuria is noted for his impressive record and has gained attention for his performances in the octagon. If you're interested in specific details about his fights, career, or achievements, feel free to ask!"
+    },
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today? If you have any questions or need information, feel free to ask!"
+    },
+    {
+      "role": "user",
+      "content": "check flights from edmonton to montreal"
+    },
+    {
+      "role": "assistant",
+      "content": "It seems that I've accidentally attempted to check for flights with an invalid date. Since today's date is past the specified request, I cannot provide flight details for it. \n\nCould you please provide a future date for your flight from Edmonton to Montreal? I'll be happy to assist you in finding available flights!"
+    },
+    {
+      "role": "user",
+      "content": "august 5th 2025"
+    },
+    {
+      "role": "assistant",
+      "content": "It appears that I'm currently unable to retrieve flight data due to a persistent issue with the date. If you want, you can provide another future date for your flight from Edmonton to Montreal, and I'll gladly assist you in finding options!"
+    },
+    {
+      "role": "user",
+      "content": "august 26th 2025"
+    },
+    {
+      "role": "assistant",
+      "content": "Here are some flight options from Edmonton (YEG) to Montreal (YUL) on August 26, 2025:\n\n### Flight Options:\n\n1. **WestJet (WS)**\n   - **Departure:** August 26, 2025, at 11:15 AM (YEG)\n   - **Arrival:** August 26, 2025, at 5:19 PM (YUL)\n   - **Duration:** 4 hours 4 minutes\n   - **Stops:** Non-stop\n   - **Price:** €382.83\n   - **Additional Info:** Includes cabin bag; checked bags available for an extra charge.\n\n2. **WestJet (WS)**\n   - **Departure:** August 26, 2025, at 8:00 AM (YEG)\n   - **Arrival:** August 26, 2025, at 4:27 PM (YUL), with a layover in Calgary (YYC)\n   - **Duration:** 6 hours 27 minutes\n   - **Stops:** 1 (in Calgary)\n   - **Price:** €382.83\n   - **Additional Info:** Includes cabin bag; checked bags available for an extra charge.\n\n3. **Air Canada (AC)**\n   - **Departure:** August 26, 2025, at 1:05 PM (YEG)\n   - **Arrival:** August 26, 2025, at 23:12 PM (YUL), with a layover\n   - **Duration:** 4 hours 7 minutes\n   - **Stops:** Non-stop\n   - **Price:** €389.41\n   - **Additional Info:** Includes cabin bag; checked bags available for an extra charge.\n\n4. **WestJet (WS)**\n   - **Departure:** August 26, 2025, at 8:00 AM (YEG)\n   - **Arrival:** August 26, 2025, at 4:27 PM (YUL), with a layover in Calgary (YYC)\n   - **Duration:** 10 hours 52 minutes\n   - **Stops:** 1\n   - **Price:** €408.94\n   - **Additional Info:** Includes cabin bag; checked bags available for an extra charge.\n\n### Summary:\n- The **cheapest option** is the **WestJet flight** departing at 11:15 AM with a **total price of €382.83.**\n- Prices may vary based on additional services like checked bags and seat assignments.\n\nIf you would like more information or to proceed with a booking, let me know!"
     }
   ]
 }

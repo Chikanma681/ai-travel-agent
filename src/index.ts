@@ -4,7 +4,7 @@ import type { ModelMessage } from 'ai'
 import dotenv from "dotenv";
 
 import * as readline from 'node:readline/promises';
-import { findFlight } from "./tools.ts";
+import { findFlight } from './tools.ts';
 import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node';
 import { join, dirname } from 'path';
@@ -45,7 +45,7 @@ async function main() {
     const result = streamText({
       model: openrouter('openai/gpt-4o-mini'),
       messages: db.data.messages,
-      system: "You are AI flight assistant that uses Amadeus API to find flights. You can answer questions about flights, such as 'find me a flight from SYD to BKK on 2023-05-02'.",
+      system: "You are AI flight assistant that uses Amadeus API to find flights. You can answer questions about flights, such as 'find me a flight from SYD to BKK on 2023-05-02'. if a user asks a question non-related to travel try and redirect them.",
       tools: {
         findFlight: findFlight,
       },
