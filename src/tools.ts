@@ -44,7 +44,6 @@ export const findFlight = tool({
       }
 
       const data = await response.json();
-      console.log("API Response:", data);
       return data;
     } catch (error) {
       console.error("Fetch error:", error);
